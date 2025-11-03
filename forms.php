@@ -1,20 +1,4 @@
-<?php
-    if (isset($_POST['submit'])) {
-        include_once('conect.php');
 
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        $telefone = $_POST['tel'];
-        $sexo = $_POST['sexo'];
-        $data= $_POST['data'];
-        $cidade = $_POST['cidade'];
-        $estado = $_POST['estado'];
-
-        $resultado = mysqli_query($conexao, "INSERT INTO cadastro (nome, email, tel, sexo, data_nasc, cidade, estado)
-        VALUES ('$nome', '$email', '$telefone', '$sexo', '$data', '$cidade', '$estado')");
-    }
-    
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -126,9 +110,11 @@
                     <br><br>
                 </div>
 
-                <button type="submit" name="submit">Enviar</button>
+                <button type="submit" name="submit" onclick="alert('Enviado com sucesso')">Enviar</button>
             </fieldset>
         </form>
     </div>
 </body>
+
 </html>
+
